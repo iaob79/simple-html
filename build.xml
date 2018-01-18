@@ -5,7 +5,7 @@
   <!-- set global properties for this build -->
   <property name="dist" location="dist"/>
   <tstamp>
-        <format property="time.stamp" pattern="dd/MM/yyyy hh:mm:ss aa" locale="th,TH"/>
+        <format property="time.stamp" pattern="ddMMyyyyhhmmss" locale="th,TH"/>
   </tstamp>
 
   <target name="init">
@@ -13,7 +13,7 @@
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
     <echo>${time.stamp} : Enter init target</echo>
-    <mkdir dir="${dist}"/>
+    <mkdir dir="dist"/>
   </target>
 
   <target name="compile" description="compile the source">
