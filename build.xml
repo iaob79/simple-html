@@ -5,7 +5,7 @@
   <!-- set global properties for this build -->
   <property name="dist" location="dist"/>
   <tstamp>
-        <format property="time.stamp" pattern="ddMMyyyyhhmmss" locale="th,TH"/>
+        <format property="time.stamp" pattern="ddMMyyhhmmss" offet="+7"/>
   </tstamp>
 
   <target name="init">
@@ -22,8 +22,9 @@
   </target>
 
   <target name="package" description="package all file in one zip">
-        <echo> message=${time.stamp} : Enter package target</echo>
-        <!-- zip simple-html folder and put into ${dist} -->
+       <echo> message=${time.stamp} : Enter package target</echo>
+       <!-- zip simple-html folder and put into ${dist} -->
+       <exec executable="whoami">
        <zip destfile="${dist}/simple-html_${time.stamp}.zip"
           basedir="../simple-html"
           update="true"
