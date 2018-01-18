@@ -9,18 +9,18 @@
     <!-- Create the time stamp -->
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
-    <echo message="${time.stamp} : Enter init target"/>
+    <echo>${time.stamp} : Enter init target</echo>
   </target>
 
   <target name="compile" depends="init"
         description="compile the source">
     <!-- Compile the java code from ${src} into ${build} -->
-    <echo message="${time.stamp} : Enter Compile target (no actual compile!!)"/>
+    <echo>${time.stamp} : Enter Compile target (no actual compile!!)</echo>
   </target>
 
   <target name="package" depends="compile"
         description="package all file in one zip">
-        <echo message="${time.stamp} : Enter package target"/>
+        <echo> message=${time.stamp} : Enter package target</echo>
         <!-- zip simple-html folder and put into ${dist} -->
        <zip destfile="${dist}/simple-html_${time.stamp}.zip"
           basedir="simple-html"
@@ -30,7 +30,7 @@
 
   <target name="dist" depends="package"
         description="generate the distribution">
-    <echo message="${time.stamp} : Enter dist target (no task)"/>
+    <echo>${time.stamp} : Enter dist target (no task)</echo>
   </target>
 
   <target name="clean"
