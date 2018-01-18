@@ -5,7 +5,7 @@
   <!-- set global properties for this build -->
   <property name="dist" location="dist"/>
   <tstamp>
-        <format property="time.stamp" pattern="ddMMyyhhmmss" offet="+7"/>
+        <format property="time.stamp" pattern="ddMMyyhhmmss" offset="+7"/>
   </tstamp>
 
   <target name="init">
