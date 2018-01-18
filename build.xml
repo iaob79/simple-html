@@ -5,7 +5,7 @@
   <!-- set global properties for this build -->
   <property name="dist" location="dist"/>
   <tstamp>
-        <format property="time.stamp" pattern="HH:mm:ss:sss zzz" locale="en,TH"/>
+        <format property="time.stamp" pattern="dd/MM/yyyy hh:mm aa" locale="th,TH"/>
   </tstamp>
 
   <target name="init">
