@@ -5,7 +5,7 @@
   <!-- set global properties for this build -->
   <property name="dist" location="dist"/>
   <tstamp>
-        <format property="time.stamp" pattern="dd/MM/yyyy hh:mm aa" locale="th,TH"/>
+        <format property="time.stamp" pattern="dd/MM/yyyy hh:mm:ss aa" locale="th,TH"/>
   </tstamp>
 
   <target name="init">
@@ -26,7 +26,7 @@
         <echo> message=${time.stamp} : Enter package target</echo>
         <!-- zip simple-html folder and put into ${dist} -->
        <zip destfile="${dist}/simple-html_${time.stamp}.zip"
-          basedir="simple-html"
+          basedir="../simple-html"
           update="true"
        />
  </target>
