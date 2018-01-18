@@ -27,6 +27,7 @@
        <exec executable="whoami"></exec>
        <zip destfile="${dist}/simple-html_${time.stamp}.zip"
           basedir="../simple-html"
+          excludes="dist"
           update="true"
        />
  </target>
