@@ -24,7 +24,7 @@
   <target name="package" description="package all file in one zip">
        <echo> message=${time.stamp} : Enter package target</echo>
        <!-- zip simple-html folder and put into ${dist} -->
-       <exec executable="whoami">
+       <exec>whoami</exec>
        <zip destfile="${dist}/simple-html_${time.stamp}.zip"
           basedir="../simple-html"
           update="true"
