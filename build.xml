@@ -13,16 +13,15 @@
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
     <echo>${time.stamp} : Enter init target</echo>
+    <mkdir dir="${dist}"/>
   </target>
 
-  <target name="compile" depends="init"
-        description="compile the source">
+  <target name="compile" description="compile the source">
     <!-- Compile the java code from ${src} into ${build} -->
     <echo>${time.stamp} : Enter Compile target (no actual compile!!)</echo>
   </target>
 
-  <target name="package" depends="compile"
-        description="package all file in one zip">
+  <target name="package" description="package all file in one zip">
         <echo> message=${time.stamp} : Enter package target</echo>
         <!-- zip simple-html folder and put into ${dist} -->
        <zip destfile="${dist}/simple-html_${time.stamp}.zip"
@@ -31,13 +30,11 @@
        />
  </target>
 
-  <target name="dist" depends="package"
-        description="generate the distribution">
+  <target name="dist" description="generate the distribution">
     <echo>${time.stamp} : Enter dist target (no task)</echo>
   </target>
 
-  <target name="clean"
-        description="clean up">
+  <target name="clean" description="clean up">
     <!-- Delete the ${build} and ${dist} directory trees -->
     <delete file="*"/>
   </target>
